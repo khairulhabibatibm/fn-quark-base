@@ -18,7 +18,7 @@ public class GreetingResourceTest {
           .when().post("/")
           .then()
              .statusCode(200)
-             .body(is("Hello World!"));
+             .body(is("{\"message\":\"Hello\",\"status\":\"00\"}"));
     }
 
 }

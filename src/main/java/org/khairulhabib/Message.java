@@ -1,8 +1,13 @@
 package org.khairulhabib;
 
+import java.io.Serializable;
 
-public class Message {
+public class Message implements Serializable {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = -7071733411217845814L;
     private String status;
     private String message;
 

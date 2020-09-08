@@ -22,22 +22,26 @@ public class GreetingResource {
 
     @POST
     @Path("/run")
-    public String run() {
+    @Produces("application/json")
+    @Consumes("application/json")
+    public Message run() {
         System.out.println("Inside run2");
         Message msg = new Message();
         msg.setMessage("Run");
         msg.setStatus("00");
-        return "Hello Run!";
+        return msg;
     }
 
     @POST
     @Path("/")
-    public String hello() {
+    @Produces("application/json")
+    @Consumes("application/json")
+    public Message hello() {
         System.out.println("Inside hello2");
         Message msg = new Message();
         msg.setMessage("Hello");
         msg.setStatus("00");
-        return "Hello World!";
+        return msg;
     }
 
     @GET
